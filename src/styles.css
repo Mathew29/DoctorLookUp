@@ -1,0 +1,13 @@
+#output {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+label {
+  font-size: 18px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #D1EEFF;
+}
