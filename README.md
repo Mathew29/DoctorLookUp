@@ -30,6 +30,10 @@ _This program will output Doctor information from a search query based on the pa
 * _Change the directory to the file DoctorLookUp_
 * _Run command $ npm init -y_
 * _Run command $ npm install_
+* _sign up for an API key at https://developer.betterdoctor.com_
+* _create a .env file in the root folder_
+* _insert "export.apiKey = [Your Personal API Key Goes Here]"_
+* _npm start_
 
 ## Support and contact details
 
