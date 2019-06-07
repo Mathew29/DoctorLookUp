@@ -19,7 +19,6 @@ $(document).ready(function() {
 
     promise.then(function(response) {
       let text = JSON.parse(response);
-      console.log(text);
 
       $('#output').empty();
       $('#output').append(`<h1>Doctor Search Results:</h1><br>`);
@@ -35,13 +34,12 @@ $(document).ready(function() {
 
         let Website = 'None';
         if (doc.practices[0].website != undefined) {
-          Website = doc.practices[0].website;
-          console.log(doc.practices[0]);
+          Website = (`<a href='`+doc.practices[0].website+`'>Website</a>`);
         }
         $('#output').append(`<h1> Name: ${doc.profile.first_name} ${doc.profile.last_name}</h1>`);
         $('#output').append(`<h1> Address: ${doc.practices[0].visit_address.street} ${doc.practices[0].visit_address.city}, ${doc.practices[0].visit_address.state} ${doc.practices[0].visit_address.zip} </h1>`);
-        $('#output').append(`<h1> Phone: ${doc.practices[0].phones[0].number}</h1>`);
-        $('#output').append(`<h1> Website: ${Website} </h1>`);
+        $('#output').append(`<h1> Phone Number: ${doc.practices[0].phones[0].number}</h1>`);
+        $('#output').append(`<h1> Website: ${Website}</h1>`);
         $('#output').append(`<h1> Accepting Patients: ${lookingForPatients}</h1> <br><hr>`);
       });
 

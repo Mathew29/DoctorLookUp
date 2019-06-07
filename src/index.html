@@ -6,17 +6,19 @@
   </head>
   <body>
     <div class="container">
-      <h1>Find a Doctor Near You!</h1>
+      <div class="jumbotron">
+        <h1>Find a Doctor Near You!</h1>
+      </div>
 
       <form id="lookUp" method="post">
         <label for="symptom">Enter a Symptom</label>
-        <input id="symptom" name="symptom">
+        <input id="symptom" type="text" name="symptom"> <br>
 
         <label for="doctorFirstName">Enter Doctor's First Name</label>
-        <input id="doctorFirstName" name="doctorFirstName">
+        <input id="doctorFirstName" type="text" name="doctorFirstName"> <br>
 
         <label for="doctorLastName">Enter Doctor's Last Name</label>
-        <input id="doctorLastName" name="doctorLastName">
+        <input id="doctorLastName" type="text" name="doctorLastName"> <br>
 
         <button type="submit" class="btn btn-info">Find A Doctor</button>
       </form>
