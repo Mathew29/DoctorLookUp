@@ -1,8 +1,8 @@
 export class DoctorLookUp {
-  getDoctor() {
+  getDoctor(symptom, doctorFirstName, doctorLastName ) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=cough&location=or-portland&skip=0&limit=10&user_key=process.env.export.apiKey`
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?first_name=${doctorFirstName}&last_name=${doctorLastName}&query=${symptom}&location=or-portland&skip=0&limit=10&user_key=${process.env.exports.apiKey}`
 
       request.onload = function() {
         if(this.status === 200) {
